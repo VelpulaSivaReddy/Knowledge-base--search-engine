@@ -1,0 +1,21 @@
+# fastapi
+# uvicorn[standard]
+# python-dotenv
+# langchain
+# langchain-community
+# langchain-google-genai
+# pypdf
+# faiss-cpu
+# streamlit
+
+
+
+
+python-dotenv
+pypdf
+faiss-cpu
+streamlit
+langchain
+langchain-community
+sentence-transformers
+langchain-huggingface
