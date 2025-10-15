@@ -88,7 +88,8 @@ def handle_query(query: str):
 
     prompt_template = """
     Answer the user's question based only on the following context.
-    If the context doesn't contain the answer, state that the information is not available.
+    If the answer is not found in the context, respond with the exact phrase: "The context provided does not contain information on this topic."
+    Do not add any other explanation or information.
 
     Context: {context}
 
@@ -100,4 +101,5 @@ def handle_query(query: str):
     retrieval_chain = create_retrieval_chain(retriever, document_chain)
 
     response = retrieval_chain.invoke({"input": query})
+
     return response["answer"]
